@@ -1,0 +1,6 @@
+table ip docker {
+    chain prerouting {
+        type nat hook prerouting priority 0; policy accept;
+        tcp dport 8888 dnat to 172.24.0.2:8888
+    }
+}
